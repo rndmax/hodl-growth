@@ -37,16 +37,6 @@
 			grid-template-rows: auto 1fr auto;
 		}
 
-		.page-footer {
-			display: flex;
-			background: #595E90;
-			height: 80px;
-			margin-left: -1rem;
-			margin-right: -1rem;
-			padding: 0 1rem;
-			align-items: center;
-		}
-
 		.mt-1 {
 			margin-top: 1rem!important;
 		}
@@ -68,31 +58,44 @@
 			.top_left {
 			    left: 0;
 			    top: 105px;
+			    width: 26px;
+				height: 50px;
 			}
 
 			.top_right {
 				top: 54px;
 				right: 0;
+				width: 52px;
+				height: 89px;
 			}
-
+			
 		.bubble_middle {
-			text-align: right;
-		    margin-top: 1rem;
+			height: 80px;
+		    right: 22px;
+		    top: 410px;
 		}
 
 		.bubble_middle_right {
-			position: absolute;
 		    width: 39px;
 		    height: 86px;
 		    right: 0;
-		    top: 565px;
+		    top: 590px;
 		}
 
 		.bubble_bottom {
 			text-align: right;
 			margin-right: 1rem;
 			margin-bottom: -22px;
+			
 		}
+
+			.bubble_bottom img {
+				width: 65px;
+			}
+
+		.bubble_top_center {
+				display: none;
+			}
 
 		.text-wrap {
 			position: relative;
@@ -129,7 +132,7 @@
 			font-size: 14px;
 			line-height: 19px;
 			color: #595E90;
-			margin-top: 37px;
+			margin-top: 129px;
 		}
 
 		.par4 {
@@ -171,11 +174,161 @@
 					"sd main main main"
 					"sd ft ft ft";
 		}
+
+		.page-footer {
+			display: flex;
+			background: #595E90;
+			height: 80px;
+			margin-left: -1rem;
+			margin-right: -1rem;
+			padding: 0 1rem;
+			align-items: center;
+		}
+
+		.assistant {
+			width: 100px;
+		}
+
+		.mail {
+			width: 60px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			.wrapper {
+				max-width: 745px;
+				margin-left: 135px;
+				margin-top: 70px;
+			}
+
+			.par1 {
+				font-size: 42px;
+				line-height: 57.2px;
+				margin-top: 58px;
+
+
+			}
+			.title-wrap {
+				height: 104px;
+				width: 200px
+			}
+
+			.club_img {
+				width: 48px;
+				height: 20px;
+				margin-top: -5px;
+			}
+
+			.par2 {
+				font-size: 16px;
+			}
+
+			.par3 {
+				font-size: 18px;
+				margin-top: 327px;
+			}
+
+			.par4 {
+				font-size: 16px;
+			    margin-bottom: 145px;
+			    width: 600px;
+			}
+			.cards {
+				display: flex;
+				margin-top: 67px;
+			}
+
+			.wrapper-grid {
+				margin-top: 28px;
+				grid-template-areas:
+						"sd sd sd"
+						"main main main"
+						"ft ft ft";
+						font-size: 16px;
+			}
+
+			.sidebar {
+				margin-bottom: 24px;
+			}
+
+			.content {
+				margin-bottom: 16px;
+			}
+
+			.page-footer {
+				margin-right: -8rem;
+				margin-left: -10rem;
+				justify-content: space-evenly;
+			}
+
+			.top_right {
+				width: 144px;
+				height: 255px;
+			}
+			
+			.top_left {
+			    height: 256px;
+			    width: auto;
+			    margin-top: 455px;
+			}
+
+
+			.bubble_bottom {
+				text-align: left;
+   				margin-left: -8rem;
+    			margin-bottom: -45px;		
+			}
+
+			.bubble_middle_right {
+				width: 104px;
+				height: 246px;
+				top: 1112px;
+			}
+
+			.bubble_middle {
+    			right: 75px;
+			    top: 710px;
+			}
+
+			.bubble_top_center {
+				display: block;
+				right: 160px;
+    			position: absolute;
+    			height: 150px;
+    			top: 23px;
+			}
+
+			.mail-img {
+				margin: 0;
+			}
+					
+		}
+
+		@media screen and (min-width: 1440px) {
+			.par1 {
+				margin-top: 0;
+			}
+
+			.bubble_top_center {
+				top: 120px;
+			}
+
+			.top_right {
+				top: 230px;
+			}
+
+			.bubble_middle {
+			    right: 340px;
+			}
+
+			.page-footer {
+			    margin-right: -34rem;
+			}
+		}
 	</style>
 <body>
 	<section>
 		<div class="wrapper">
-			<div>
+			<div class="title-wrap">
 				<img class="hold_img" src="./img/hold.svg">
 				<img class="growth_img" src="./img/growth.svg">
 			</div>
@@ -185,6 +338,11 @@
 			<div>
 				<img class="bubble top_left" src="./img/bubble_top_left.png">
 				<img class="bubble top_right" src="./img/bubble_top_right.png">
+				<img class="bubble bubble_middle_right" src="./img/bubble_middle_right.png">
+				<img class="bubble bubble_middle" src="./img/bubble_middle.png">
+			</div>
+			<div>
+				<img  class="bubble_top_center" src="./img/buble_top_center.png" >
 			</div>
 			<div class="text-wrap"> 
 				<p class="par1">This year, our investors achieved an average ROI of <span>+69.31%</span></p>
@@ -192,33 +350,30 @@
 				<p class="par2">We offer investors the opportunity to achieve attractive long-term returns through our funds in crypto-currencies, cloud mainig, staking and erning.</p>
 			
 				<p class="par2 mt-1">Lock stablecoins and earn a monthly passive income</p>
-				<p class="bubble_middle">
-					<img src="./img/bubble_middle.png">
-				</p>
 				<p class="par3">A truly transparent investment fund with minimum constraints and clear conditions allowing the investors to make the most of their time and money.</p>		
-				<style>
-					
-				</style>
-				<div class="wrapper-grid">
-					<div class="sidebar">
-						<img src="./img/grid_sidebar1.svg" align: left>
+				
+				<div class="cards">
+					<div class="wrapper-grid">
+						<div class="sidebar">
+							<img src="./img/grid_sidebar1.svg" align: left>
+						</div>
+						<div class="content font-style">DeFi</div>
+						<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
 					</div>
-					<div class="content font-style">DeFi</div>
-					<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
-				</div>
-				<div class="wrapper-grid">
-					<div class="sidebar">
-						<img src="./img/grid_sidebar2.svg" align: left>
+					<div class="wrapper-grid">
+						<div class="sidebar">
+							<img src="./img/grid_sidebar2.svg" align: left>
+						</div>
+						<div class="content font-style">ICO</div>
+						<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
 					</div>
-					<div class="content font-style">ICO</div>
-					<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
-				</div>
-				<div class="wrapper-grid">
-					<div class="sidebar">
-						<img src="./img/grid_sidebar3.svg" align: left>
+					<div class="wrapper-grid">
+						<div class="sidebar">
+							<img src="./img/grid_sidebar3.svg" align: left>
+						</div>
+						<div class="content font-style">Cloud Mining</div>
+						<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
 					</div>
-					<div class="content font-style">Cloud Mining</div>
-					<div class="footer font-style">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
 				</div>
 				<p class="font-style par4">
 					HODL GROWTH was launched in 2020 to find new forms of earning in the rapidly changing world of blockchain when it is completely impossible to cover all areas of knowledge and at the same time keep an eye on new projects and opportunities.
@@ -231,15 +386,12 @@
 				</p>
 				<footer class="page-footer">
 					<div>
-					<img src="./img/assistant.svg">
+					<img class="assistant" src="./img/assistant.svg">
 				</div>
 				<div class="mail-img">
-					<a href="mailto:test@gmail.com"><img src="./img/mail.svg"></a>
+					<a href="mailto:test@gmail.com"><img class="mail" src="./img/mail.svg"></a>
 				</div>
 				</footer>
-			</div>
-			<div class="bubble_middle_right">
-				<img src="./img/bubble_middle_right.png" align: right >
 			</div>
 		</div>
 	</section>
